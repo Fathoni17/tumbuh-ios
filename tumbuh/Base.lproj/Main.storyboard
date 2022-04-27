@@ -15,14 +15,27 @@
                     <view key="view" contentMode="scaleToFill" id="o1b-Xn-2Gc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EiA-bx-mPJ">
+                                <rect key="frame" x="8" y="44" width="406" height="96"/>
+                                <items>
+                                    <navigationItem title="Today" id="rLF-00-mbh"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9kt-88-hEB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EiA-bx-mPJ" firstAttribute="leading" secondItem="9kt-88-hEB" secondAttribute="leading" constant="8" id="eL0-Cb-Z4X"/>
+                            <constraint firstItem="EiA-bx-mPJ" firstAttribute="trailing" secondItem="9kt-88-hEB" secondAttribute="trailing" id="jF1-dz-YOX"/>
+                            <constraint firstItem="EiA-bx-mPJ" firstAttribute="top" secondItem="9kt-88-hEB" secondAttribute="top" id="qqq-Nw-7sv"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Summary" image="chart.bar.doc.horizontal" catalog="system" id="Z5w-So-RH3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TY9-H2-Hql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3183" y="475"/>
+            <point key="canvasLocation" x="-3184.057971014493" y="474.77678571428567"/>
         </scene>
         <!--Goals-->
         <scene sceneID="PLz-39-GHt">
@@ -31,8 +44,21 @@
                     <view key="view" contentMode="scaleToFill" id="TBV-No-EDA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojZ-OE-OaR">
+                                <rect key="frame" x="8" y="44" width="406" height="96"/>
+                                <items>
+                                    <navigationItem title="Goals" id="Vkk-K0-V8T"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="35C-RY-t1N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ojZ-OE-OaR" firstAttribute="leading" secondItem="35C-RY-t1N" secondAttribute="leading" constant="8" id="1x8-w4-rJj"/>
+                            <constraint firstItem="ojZ-OE-OaR" firstAttribute="top" secondItem="35C-RY-t1N" secondAttribute="top" id="6M8-eL-ckW"/>
+                            <constraint firstItem="ojZ-OE-OaR" firstAttribute="trailing" secondItem="35C-RY-t1N" secondAttribute="trailing" id="Blm-3c-pEn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Goals" image="checkmark.seal" catalog="system" id="2jg-dY-AeL"/>
                 </viewController>
@@ -47,8 +73,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YU5-eg-XEW">
+                                <rect key="frame" x="8" y="44" width="406" height="96"/>
+                                <items>
+                                    <navigationItem title="Accounts" id="jvS-qY-Sy5"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YU5-eg-XEW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3QE-Tz-nlk"/>
+                            <constraint firstItem="YU5-eg-XEW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="VcN-rF-8MT"/>
+                            <constraint firstItem="YU5-eg-XEW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zF1-4e-zFn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="creditcard" catalog="system" id="T5k-0Y-edJ"/>
                 </viewController>
@@ -63,8 +102,21 @@
                     <view key="view" contentMode="scaleToFill" id="kLw-il-uOb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRK-aD-bvG">
+                                <rect key="frame" x="8" y="44" width="406" height="96"/>
+                                <items>
+                                    <navigationItem title="Detail Transaction" id="ZrY-Y3-ES2"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dGQ-ai-a7y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dGQ-ai-a7y" firstAttribute="trailing" secondItem="hRK-aD-bvG" secondAttribute="trailing" id="9JY-m4-geR"/>
+                            <constraint firstItem="hRK-aD-bvG" firstAttribute="leading" secondItem="kLw-il-uOb" secondAttribute="leading" constant="8" id="VFW-Hr-5Bn"/>
+                            <constraint firstItem="hRK-aD-bvG" firstAttribute="top" secondItem="dGQ-ai-a7y" secondAttribute="top" id="ivV-h7-XG0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Detail" image="note.text" catalog="system" id="2HF-2X-mjK"/>
                 </viewController>
