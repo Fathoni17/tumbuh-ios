@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		328CEB4C2818FBB600FD8DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB4B2818FBB600FD8DE6 /* AppDelegate.swift */; };
 		328CEB4E2818FBB600FD8DE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB4D2818FBB600FD8DE6 /* SceneDelegate.swift */; };
-		328CEB502818FBB600FD8DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB4F2818FBB600FD8DE6 /* ViewController.swift */; };
+		328CEB502818FBB600FD8DE6 /* AccountsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB4F2818FBB600FD8DE6 /* AccountsVC.swift */; };
 		328CEB532818FBB600FD8DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328CEB512818FBB600FD8DE6 /* Main.storyboard */; };
 		328CEB562818FBB600FD8DE6 /* tumbuh.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB542818FBB600FD8DE6 /* tumbuh.xcdatamodeld */; };
 		328CEB582818FBB700FD8DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328CEB572818FBB700FD8DE6 /* Assets.xcassets */; };
@@ -17,6 +17,9 @@
 		328CEB662818FBB700FD8DE6 /* tumbuhTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB652818FBB700FD8DE6 /* tumbuhTests.swift */; };
 		328CEB702818FBB700FD8DE6 /* tumbuhUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB6F2818FBB700FD8DE6 /* tumbuhUITests.swift */; };
 		328CEB722818FBB700FD8DE6 /* tumbuhUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB712818FBB700FD8DE6 /* tumbuhUITestsLaunchTests.swift */; };
+		328CEB7F2819F3A100FD8DE6 /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB7E2819F3A100FD8DE6 /* SummaryVC.swift */; };
+		328CEB812819F3B300FD8DE6 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB802819F3B300FD8DE6 /* GoalsVC.swift */; };
+		328CEB832819F3C500FD8DE6 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB822819F3C500FD8DE6 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 		328CEB482818FBB600FD8DE6 /* tumbuh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tumbuh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328CEB4B2818FBB600FD8DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		328CEB4D2818FBB600FD8DE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		328CEB4F2818FBB600FD8DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		328CEB4F2818FBB600FD8DE6 /* AccountsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsVC.swift; sourceTree = "<group>"; };
 		328CEB522818FBB600FD8DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		328CEB552818FBB600FD8DE6 /* tumbuh.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tumbuh.xcdatamodel; sourceTree = "<group>"; };
 		328CEB572818FBB700FD8DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		328CEB6B2818FBB700FD8DE6 /* tumbuhUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tumbuhUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		328CEB6F2818FBB700FD8DE6 /* tumbuhUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tumbuhUITests.swift; sourceTree = "<group>"; };
 		328CEB712818FBB700FD8DE6 /* tumbuhUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tumbuhUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		328CEB7E2819F3A100FD8DE6 /* SummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryVC.swift; sourceTree = "<group>"; };
+		328CEB802819F3B300FD8DE6 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
+		328CEB822819F3C500FD8DE6 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,10 @@
 			children = (
 				328CEB4B2818FBB600FD8DE6 /* AppDelegate.swift */,
 				328CEB4D2818FBB600FD8DE6 /* SceneDelegate.swift */,
-				328CEB4F2818FBB600FD8DE6 /* ViewController.swift */,
+				328CEB4F2818FBB600FD8DE6 /* AccountsVC.swift */,
+				328CEB7E2819F3A100FD8DE6 /* SummaryVC.swift */,
+				328CEB802819F3B300FD8DE6 /* GoalsVC.swift */,
+				328CEB822819F3C500FD8DE6 /* DetailVC.swift */,
 				328CEB512818FBB600FD8DE6 /* Main.storyboard */,
 				328CEB572818FBB700FD8DE6 /* Assets.xcassets */,
 				328CEB592818FBB700FD8DE6 /* LaunchScreen.storyboard */,
@@ -261,10 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				328CEB7F2819F3A100FD8DE6 /* SummaryVC.swift in Sources */,
 				328CEB562818FBB600FD8DE6 /* tumbuh.xcdatamodeld in Sources */,
-				328CEB502818FBB600FD8DE6 /* ViewController.swift in Sources */,
+				328CEB502818FBB600FD8DE6 /* AccountsVC.swift in Sources */,
+				328CEB812819F3B300FD8DE6 /* GoalsVC.swift in Sources */,
 				328CEB4C2818FBB600FD8DE6 /* AppDelegate.swift in Sources */,
 				328CEB4E2818FBB600FD8DE6 /* SceneDelegate.swift in Sources */,
+				328CEB832819F3C500FD8DE6 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
