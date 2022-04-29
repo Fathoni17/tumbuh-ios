@@ -14,6 +14,10 @@ class AccountVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.tabBarController?.navigationItem.title = "Accounts"
+    }
 
 }
 

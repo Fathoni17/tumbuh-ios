@@ -1,5 +1,5 @@
 //
-//  GoalsVC.swift
+//  DetailVC.swift
 //  tumbuh
 //
 //  Created by Fathoni on 28/04/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GoalsVC: UIViewController {
+class DetailVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +15,11 @@ class GoalsVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.tabBarController?.navigationItem.title = "Detail Transaction"
+    }
+
 
     /*
     // MARK: - Navigation
