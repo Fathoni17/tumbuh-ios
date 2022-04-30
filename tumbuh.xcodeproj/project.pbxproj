@@ -228,7 +228,6 @@
 				32C13A6D281AE65400DB114E /* SummaryHeaderCell.xib */,
 				32C13A72281AEACD00DB114E /* GoalsSummaryCell.xib */,
 				32C13A76281AECAE00DB114E /* GoalSummaryItemCell.xib */,
-				32C13A89281B5DCC00DB114E /* AccountHeaderSummaryCell.xib */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -236,6 +235,7 @@
 		32C13A8C281B628000DB114E /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				32C13A89281B5DCC00DB114E /* AccountHeaderSummaryCell.xib */,
 				32C13A8F281B62B700DB114E /* AccountItemCell.xib */,
 			);
 			path = Account;

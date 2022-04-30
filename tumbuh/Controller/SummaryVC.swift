@@ -26,6 +26,10 @@ class SummaryVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.tabBarController?.navigationItem.title = "Today"
     }
@@ -33,11 +37,7 @@ class SummaryVC: UIViewController {
 
 extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 16
+        return 3+7 // plus number of accounts
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -49,7 +49,7 @@ extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
         case 2:
             return 52
         default:
-            return 70
+            return 70+16
         }
     }
     
@@ -69,8 +69,6 @@ extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             let cell = (tableView.dequeueReusableCell(withIdentifier: "accountItemCellId", for: indexPath) as? AccountItemCell)!
-
-            addBorder(border: 12, cell: cell)
             
             return cell
         }

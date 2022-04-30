@@ -9,6 +9,7 @@ import UIKit
 
 class AccountItemCell: UITableViewCell {
 
+    @IBOutlet weak var container: UIStackView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -16,8 +17,8 @@ class AccountItemCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        container.layer.cornerRadius =  8
+        container.clipsToBounds = true
     }
     
 }
