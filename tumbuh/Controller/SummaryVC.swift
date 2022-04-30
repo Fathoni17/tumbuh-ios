@@ -45,7 +45,7 @@ extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 71+24
         case 1:
-            return 152+8+17+16
+            return 152+8+17+24
         case 2:
             return 52
         default:
