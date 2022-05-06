@@ -15,6 +15,7 @@ class SummaryVC: UIViewController {
         
         registerCell()
         tableView.separatorStyle = .none
+        setupNavigationBar()
     }
     
     func registerCell() {
@@ -26,12 +27,47 @@ class SummaryVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        setupNavigationBar()
+        
     }
     
     func setupNavigationBar() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, dd MMMM"
+        let buttonText = UIButton(type: .custom)
+        
+        buttonText.setTitle(dateFormatter.string(from: Date.now), for: .normal)
+        buttonText.setTitleColor(UIColor(named: "primary"), for: .normal)
+        let todayDate = UIBarButtonItem(customView: buttonText)
+        
+        // Add and Settings button for Right barButtonItems
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        let settingsButton = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(settingsTapped))
+        
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.tabBarController?.navigationItem.title = "Today"
+        self.tabBarController?.navigationItem.leftBarButtonItems = [todayDate]
+        self.tabBarController?.navigationItem.rightBarButtonItems = [settingsButton, addButton]
+        self.tabBarController?.navigationController?.hidesBarsOnSwipe = true
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+
+        let draggDelta = scrollView.contentOffset.y - targetContentOffset.pointee.y
+
+        let hiddenContentHeight = tableView.contentSize.height - tableView.frame.height - 1
+
+        if 0 < draggDelta && targetContentOffset.pointee.y < hiddenContentHeight || (targetContentOffset.pointee.y == 0 && scrollView.contentOffset.y < 0) {
+
+            // Shows Navigation Bar
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+    }
+    
+    @objc func addTapped() {
+        print("AddTapped")
+    }
+    @objc func settingsTapped() {
+        print("SettingsTapped")
     }
 }
 
