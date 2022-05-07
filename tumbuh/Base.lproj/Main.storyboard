@@ -11,7 +11,7 @@
         <!--Today-->
         <scene sceneID="zVP-5z-uO3">
             <objects>
-                <viewController id="b0a-n0-xT4" customClass="SummaryVC" customModule="tumbuh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Today" id="b0a-n0-xT4" customClass="SummaryVC" customModule="tumbuh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o1b-Xn-2Gc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="-3090" y="475"/>
         </scene>
-        <!--Title-->
+        <!--Goals-->
         <scene sceneID="PLz-39-GHt">
             <objects>
-                <viewController id="6kr-NT-Ccn" customClass="GoalsVC" customModule="tumbuh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Goals" id="6kr-NT-Ccn" customClass="GoalsVC" customModule="tumbuh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TBV-No-EDA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,6 +59,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sCx-l2-xaV">
                                 <rect key="frame" x="16" y="88" width="382" height="725"/>
                                 <color key="backgroundColor" name="background"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6kr-NT-Ccn" id="9Yh-s0-IDf"/>
+                                    <outlet property="delegate" destination="6kr-NT-Ccn" id="UIe-ve-7FK"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="35C-RY-t1N"/>
@@ -72,15 +76,18 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Goals" image="checkmark.seal" catalog="system" id="2jg-dY-AeL"/>
                     <navigationItem key="navigationItem" title="Title" id="udR-W0-Chu"/>
+                    <connections>
+                        <outlet property="tableView" destination="sCx-l2-xaV" id="ep1-0d-fuw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rib-7x-cZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2342.0289855072465" y="474.77678571428567"/>
         </scene>
-        <!--Title-->
+        <!--Account-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AccountVC" customModule="tumbuh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Account" id="BYZ-38-t0r" customClass="AccountVC" customModule="tumbuh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="-1562.3188405797102" y="474.77678571428567"/>
         </scene>
-        <!--Title-->
+        <!--Detail-->
         <scene sceneID="1xJ-Rg-fHV">
             <objects>
-                <viewController id="YFL-EL-onA" customClass="DetailVC" customModule="tumbuh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" id="YFL-EL-onA" customClass="DetailVC" customModule="tumbuh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kLw-il-uOb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -20,6 +20,8 @@
 		328CEB7F2819F3A100FD8DE6 /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB7E2819F3A100FD8DE6 /* SummaryVC.swift */; };
 		328CEB812819F3B300FD8DE6 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB802819F3B300FD8DE6 /* GoalsVC.swift */; };
 		328CEB832819F3C500FD8DE6 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328CEB822819F3C500FD8DE6 /* DetailVC.swift */; };
+		32C06A5F2824D3D00016632F /* GoalListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C06A5D2824D3D00016632F /* GoalListItemCell.swift */; };
+		32C06A602824D3D00016632F /* GoalListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C06A5E2824D3D00016632F /* GoalListItemCell.xib */; };
 		32C13A6E281AE65400DB114E /* SummaryHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C13A6C281AE65400DB114E /* SummaryHeaderCell.swift */; };
 		32C13A6F281AE65400DB114E /* SummaryHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C13A6D281AE65400DB114E /* SummaryHeaderCell.xib */; };
 		32C13A73281AEACD00DB114E /* GoalsSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C13A71281AEACD00DB114E /* GoalsSummaryCell.swift */; };
@@ -72,6 +74,8 @@
 		328CEB7E2819F3A100FD8DE6 /* SummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryVC.swift; sourceTree = "<group>"; };
 		328CEB802819F3B300FD8DE6 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		328CEB822819F3C500FD8DE6 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		32C06A5D2824D3D00016632F /* GoalListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListItemCell.swift; sourceTree = "<group>"; };
+		32C06A5E2824D3D00016632F /* GoalListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalListItemCell.xib; sourceTree = "<group>"; };
 		32C13A6C281AE65400DB114E /* SummaryHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryHeaderCell.swift; sourceTree = "<group>"; };
 		32C13A6D281AE65400DB114E /* SummaryHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryHeaderCell.xib; sourceTree = "<group>"; };
 		32C13A71281AEACD00DB114E /* GoalsSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSummaryCell.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 		328CEB85281A51EE00FD8DE6 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
+				32C06A5D2824D3D00016632F /* GoalListItemCell.swift */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -189,6 +194,14 @@
 			children = (
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		32C06A5C2824D3A80016632F /* Goal */ = {
+			isa = PBXGroup;
+			children = (
+				32C06A5E2824D3D00016632F /* GoalListItemCell.xib */,
+			);
+			path = Goal;
 			sourceTree = "<group>";
 		};
 		32C13A79281AF40F00DB114E /* Models */ = {
@@ -252,6 +265,7 @@
 		32C13A96281B981100DB114E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				32C06A5C2824D3A80016632F /* Goal */,
 				32C13A8C281B628000DB114E /* Account */,
 				32C13A86281B564600DB114E /* Summary */,
 			);
@@ -389,6 +403,7 @@
 				32C13A78281AECAE00DB114E /* GoalSummaryItemCell.xib in Resources */,
 				328CEB5B2818FBB700FD8DE6 /* LaunchScreen.storyboard in Resources */,
 				32C13A6F281AE65400DB114E /* SummaryHeaderCell.xib in Resources */,
+				32C06A602824D3D00016632F /* GoalListItemCell.xib in Resources */,
 				328CEB582818FBB700FD8DE6 /* Assets.xcassets in Resources */,
 				328CEB532818FBB600FD8DE6 /* Main.storyboard in Resources */,
 				32C13A74281AEACD00DB114E /* GoalsSummaryCell.xib in Resources */,
@@ -433,6 +448,7 @@
 				328CEB4C2818FBB600FD8DE6 /* AppDelegate.swift in Sources */,
 				328CEB4E2818FBB600FD8DE6 /* SceneDelegate.swift in Sources */,
 				328CEB832819F3C500FD8DE6 /* DetailVC.swift in Sources */,
+				32C06A5F2824D3D00016632F /* GoalListItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
