@@ -32,18 +32,18 @@ class GoalsSummaryCell: UITableViewCell {
 
 extension GoalsSummaryCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        GoalRepository().getGoalList().count
+        GoalRepository.instance.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let goal = GoalRepository().getGoalList()[indexPath.row]
+        let goal = GoalRepository.instance.getGoalList()[indexPath.row]
 
         let cell = (goalCollection.dequeueReusableCell(withReuseIdentifier: "goalSummaryItemCellId", for: indexPath) as? GoalSummaryItemCell)!
         cell.goalName.text = goal.name
         cell.thumbGoal.image = UIImage(named: goal.image)
         if (goal.goal != nil) {
-            let percentage = goal.balance / goal.goal!
-            cell.goalPrecentage.text = "\(percentage)%"
+            let percentage = Double(goal.balance) / Double(goal.goal!) * 100
+            cell.goalPrecentage.text = String(format: "%.0f", percentage)+"%"
             cell.goalProgress.text = "\(amountFormater(amount: Float(goal.balance), short: true)) / \(amountFormater(amount: Float(goal.goal!), short: true))"
         } else {
             cell.goalPrecentage.text = "--"
