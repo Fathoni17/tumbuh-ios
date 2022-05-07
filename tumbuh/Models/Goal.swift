@@ -12,5 +12,5 @@ struct GoalModel {
     var name: String
     var image: String
     var goal: Int64?
-    var balance: Int64?
+    var balance: Int64
 }

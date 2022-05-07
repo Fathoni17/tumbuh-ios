@@ -16,18 +16,19 @@ class SummaryVC: UIViewController {
         registerCell()
     }
     
-    func registerCell() {
-        tableView.register(UINib(nibName: "SummaryHeaderCell", bundle: nil), forCellReuseIdentifier: "summaryHeaderCellId")
-        tableView.register(UINib(nibName: "GoalsSummaryCell", bundle: nil), forCellReuseIdentifier: "goalsSummaryCellId")
-        tableView.register(UINib(nibName: "AccountSummaryCell", bundle: nil), forCellReuseIdentifier: "accountSummaryCellId")
-        
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         setupNavigationBar()
     }
     
+    func registerCell() {
+        // MARK: - Registering used cell
+        tableView.register(UINib(nibName: "SummaryHeaderCell", bundle: nil), forCellReuseIdentifier: "summaryHeaderCellId")
+        tableView.register(UINib(nibName: "GoalsSummaryCell", bundle: nil), forCellReuseIdentifier: "goalsSummaryCellId")
+        tableView.register(UINib(nibName: "AccountSummaryCell", bundle: nil), forCellReuseIdentifier: "accountSummaryCellId")
+    }
+
     func setupNavigationBar() {
+        // MARK: - setup Navigation Bar
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE, dd MMM"
         let buttonText = UIButton(type: .custom)
@@ -49,7 +50,7 @@ class SummaryVC: UIViewController {
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-
+        // MARK: - Handle navigation to show on scroll down
         let draggDelta = scrollView.contentOffset.y - targetContentOffset.pointee.y
 
         let hiddenContentHeight = tableView.contentSize.height - tableView.frame.height - 1
@@ -61,6 +62,7 @@ class SummaryVC: UIViewController {
         }
     }
     
+    // MARK: - Function for button
     @objc func addTapped() {
         print("AddTapped")
     }
@@ -143,7 +145,7 @@ extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 1:
             let cell = (tableView.dequeueReusableCell(withIdentifier: "goalsSummaryCellId", for: indexPath) as? GoalsSummaryCell)!
-            
+                        
             return cell
         default:
             let cell = (tableView.dequeueReusableCell(withIdentifier: "accountSummaryCellId", for: indexPath) as? AccountSummaryCell)!

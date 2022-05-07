@@ -23,6 +23,7 @@
 		32C06A5F2824D3D00016632F /* GoalListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C06A5D2824D3D00016632F /* GoalListItemCell.swift */; };
 		32C06A602824D3D00016632F /* GoalListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C06A5E2824D3D00016632F /* GoalListItemCell.xib */; };
 		32C06A6228266C820016632F /* GroupedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C06A6128266C820016632F /* GroupedSection.swift */; };
+		32C06A6528272A490016632F /* GoalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C06A6428272A490016632F /* GoalRepository.swift */; };
 		32C13A6E281AE65400DB114E /* SummaryHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C13A6C281AE65400DB114E /* SummaryHeaderCell.swift */; };
 		32C13A6F281AE65400DB114E /* SummaryHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C13A6D281AE65400DB114E /* SummaryHeaderCell.xib */; };
 		32C13A73281AEACD00DB114E /* GoalsSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C13A71281AEACD00DB114E /* GoalsSummaryCell.swift */; };
@@ -78,6 +79,7 @@
 		32C06A5D2824D3D00016632F /* GoalListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListItemCell.swift; sourceTree = "<group>"; };
 		32C06A5E2824D3D00016632F /* GoalListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalListItemCell.xib; sourceTree = "<group>"; };
 		32C06A6128266C820016632F /* GroupedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedSection.swift; sourceTree = "<group>"; };
+		32C06A6428272A490016632F /* GoalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRepository.swift; sourceTree = "<group>"; };
 		32C13A6C281AE65400DB114E /* SummaryHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryHeaderCell.swift; sourceTree = "<group>"; };
 		32C13A6D281AE65400DB114E /* SummaryHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryHeaderCell.xib; sourceTree = "<group>"; };
 		32C13A71281AEACD00DB114E /* GoalsSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSummaryCell.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		328CEB4A2818FBB600FD8DE6 /* tumbuh */ = {
 			isa = PBXGroup;
 			children = (
+				32C06A6328272A350016632F /* Repository */,
 				32C13A93281B6AFB00DB114E /* Utils */,
 				328CEB4B2818FBB600FD8DE6 /* AppDelegate.swift */,
 				328CEB4D2818FBB600FD8DE6 /* SceneDelegate.swift */,
@@ -209,6 +212,14 @@
 				32C13A76281AECAE00DB114E /* GoalSummaryItemCell.xib */,
 			);
 			path = Goal;
+			sourceTree = "<group>";
+		};
+		32C06A6328272A350016632F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				32C06A6428272A490016632F /* GoalRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		32C13A79281AF40F00DB114E /* Models */ = {
@@ -440,6 +451,7 @@
 				32C13A6E281AE65400DB114E /* SummaryHeaderCell.swift in Sources */,
 				32C13A73281AEACD00DB114E /* GoalsSummaryCell.swift in Sources */,
 				328CEB562818FBB600FD8DE6 /* tumbuh.xcdatamodeld in Sources */,
+				32C06A6528272A490016632F /* GoalRepository.swift in Sources */,
 				32C13A8A281B5DCC00DB114E /* AccountSummaryCell.swift in Sources */,
 				32C06A6228266C820016632F /* GroupedSection.swift in Sources */,
 				32C13A7D281AF51200DB114E /* Account.swift in Sources */,

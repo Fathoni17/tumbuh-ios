@@ -124,7 +124,7 @@
                 <outlet property="container" destination="OFX-9D-2LY" id="t4g-Ps-laP"/>
                 <outlet property="goalAmount" destination="LTG-e3-RxA" id="gnb-v0-46m"/>
                 <outlet property="goalName" destination="CLn-Sw-Bre" id="2d0-yC-cHo"/>
-                <outlet property="imagePlaceHolder" destination="87D-Ek-eOC" id="jNP-g1-DQN"/>
+                <outlet property="imagePlaceHolder" destination="87D-Ek-eOC" id="NzX-LK-HZ0"/>
                 <outlet property="progressPrecentage" destination="oSf-8n-cNd" id="6Ep-8g-Tqp"/>
             </connections>
             <point key="canvasLocation" x="1567" y="152"/>
