@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Mpp-Xb-ly6">
                                 <rect key="frame" x="16" y="16" width="226" height="38"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sd2-TA-kWh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AccountName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sd2-TA-kWh">
                                         <rect key="frame" x="0.0" y="0.0" width="226" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="9Su-l7-zkW"/>
@@ -33,7 +33,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0A-Go-uMC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0A-Go-uMC">
                                         <rect key="frame" x="0.0" y="22" width="226" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="zRV-V2-CUy"/>
@@ -81,10 +81,12 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" name="background"/>
             <connections>
+                <outlet property="accountBalance" destination="I0A-Go-uMC" id="2pH-V5-8Ga"/>
+                <outlet property="accountName" destination="sd2-TA-kWh" id="Eut-ir-r9l"/>
                 <outlet property="container" destination="bMQ-U5-aUo" id="Ijv-En-vlE"/>
                 <outlet property="imagePlaceHolder" destination="KWK-2Z-0T8" id="WOk-I6-X4c"/>
             </connections>
-            <point key="canvasLocation" x="286.95652173913044" y="64.955357142857139"/>
+            <point key="canvasLocation" x="-91" y="38"/>
         </tableViewCell>
     </objects>
     <resources>

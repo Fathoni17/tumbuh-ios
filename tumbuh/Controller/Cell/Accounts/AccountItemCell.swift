@@ -11,6 +11,8 @@ class AccountItemCell: UITableViewCell {
 
     @IBOutlet weak var container: UIStackView!
     @IBOutlet weak var imagePlaceHolder: UIImageView!
+    @IBOutlet weak var accountName: UILabel!
+    @IBOutlet weak var accountBalance: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
