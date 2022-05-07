@@ -33,7 +33,8 @@ class AccountVC: UIViewController {
         self.tabBarController?.navigationItem.title = "Accounts"
         self.tabBarController?.navigationItem.leftBarButtonItems = []
         self.tabBarController?.navigationItem.rightBarButtonItems = [addButton]
-        self.tabBarController?.navigationController?.hidesBarsOnSwipe = false
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.hidesBarsOnSwipe = false
     }
     
     @objc func addTapped() {

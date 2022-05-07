@@ -29,7 +29,7 @@ class SummaryVC: UIViewController {
     
     func setupNavigationBar() {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE, dd MMMM"
+        dateFormatter.dateFormat = "EEE, dd MMM"
         let buttonText = UIButton(type: .custom)
         
         buttonText.setTitle(dateFormatter.string(from: Date.now), for: .normal)
@@ -44,6 +44,7 @@ class SummaryVC: UIViewController {
         self.tabBarController?.navigationItem.title = "Today"
         self.tabBarController?.navigationItem.leftBarButtonItems = [todayDate]
         self.tabBarController?.navigationItem.rightBarButtonItems = [settingsButton, addButton]
+        navigationController?.setNavigationBarHidden(false, animated: true)
         self.tabBarController?.navigationController?.hidesBarsOnSwipe = true
     }
     
