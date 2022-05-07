@@ -22,10 +22,10 @@
                         <rect key="frame" x="0.0" y="16" width="320" height="70"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Mpp-Xb-ly6">
-                                <rect key="frame" x="16" y="16" width="218" height="38"/>
+                                <rect key="frame" x="16" y="16" width="226" height="38"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sd2-TA-kWh">
-                                        <rect key="frame" x="0.0" y="0.0" width="218" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AccountName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sd2-TA-kWh">
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="9Su-l7-zkW"/>
                                         </constraints>
@@ -33,8 +33,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0A-Go-uMC">
-                                        <rect key="frame" x="0.0" y="22" width="218" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0A-Go-uMC">
+                                        <rect key="frame" x="0.0" y="22" width="226" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="zRV-V2-CUy"/>
                                         </constraints>
@@ -50,46 +50,51 @@
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KWK-2Z-0T8">
                                 <rect key="frame" x="250" y="8" width="54" height="54"/>
+                                <color key="backgroundColor" name="secondaryContainer"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="3EU-MF-q6m"/>
-                                    <constraint firstAttribute="height" constant="54" id="T8Q-4f-h17"/>
+                                    <constraint firstAttribute="height" constant="54" id="mQB-GE-lzI"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KWK-2Z-0T8" firstAttribute="leading" secondItem="Mpp-Xb-ly6" secondAttribute="trailing" constant="16" id="3lw-1T-FcO"/>
-                            <constraint firstAttribute="bottom" secondItem="KWK-2Z-0T8" secondAttribute="bottom" constant="8" id="5wh-sg-C28"/>
-                            <constraint firstItem="Mpp-Xb-ly6" firstAttribute="leading" secondItem="bMQ-U5-aUo" secondAttribute="leading" constant="16" id="66l-md-HLR"/>
-                            <constraint firstAttribute="bottom" secondItem="I0A-Go-uMC" secondAttribute="bottom" constant="16" id="9Ox-HZ-qN8"/>
-                            <constraint firstAttribute="trailing" secondItem="KWK-2Z-0T8" secondAttribute="trailing" constant="16" id="Opv-wT-vCs"/>
-                            <constraint firstItem="Mpp-Xb-ly6" firstAttribute="centerY" secondItem="KWK-2Z-0T8" secondAttribute="centerY" id="bmB-MH-TQB"/>
-                            <constraint firstItem="Mpp-Xb-ly6" firstAttribute="top" secondItem="bMQ-U5-aUo" secondAttribute="top" constant="16" id="eQi-Nk-H5I"/>
-                            <constraint firstAttribute="height" constant="70" id="pkP-At-tTn"/>
-                            <constraint firstItem="KWK-2Z-0T8" firstAttribute="top" secondItem="bMQ-U5-aUo" secondAttribute="top" constant="8" id="uRr-l5-pHB"/>
-                            <constraint firstAttribute="bottom" secondItem="Mpp-Xb-ly6" secondAttribute="bottom" constant="16" id="vPY-eP-jgh"/>
+                            <constraint firstAttribute="bottom" secondItem="KWK-2Z-0T8" secondAttribute="bottom" constant="8" id="Zpj-PT-2Ob"/>
+                            <constraint firstItem="KWK-2Z-0T8" firstAttribute="centerY" secondItem="bMQ-U5-aUo" secondAttribute="centerY" id="frS-Ea-f7x"/>
+                            <constraint firstItem="KWK-2Z-0T8" firstAttribute="centerY" secondItem="Mpp-Xb-ly6" secondAttribute="centerY" id="ivK-Lo-6c1"/>
+                            <constraint firstAttribute="height" constant="70" id="krr-ex-JD7"/>
+                            <constraint firstItem="KWK-2Z-0T8" firstAttribute="top" secondItem="bMQ-U5-aUo" secondAttribute="top" constant="8" id="q97-53-uK3"/>
                         </constraints>
+                        <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" name="background"/>
                 <constraints>
-                    <constraint firstItem="bMQ-U5-aUo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="07e-51-yu7"/>
-                    <constraint firstAttribute="trailing" secondItem="bMQ-U5-aUo" secondAttribute="trailing" id="H1p-R3-jJY"/>
-                    <constraint firstItem="bMQ-U5-aUo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="X1e-dG-FwE"/>
-                    <constraint firstAttribute="bottom" secondItem="bMQ-U5-aUo" secondAttribute="bottom" id="yJj-JI-MUw"/>
+                    <constraint firstAttribute="bottom" secondItem="bMQ-U5-aUo" secondAttribute="bottom" id="BLR-Zh-R7l"/>
+                    <constraint firstAttribute="trailing" secondItem="bMQ-U5-aUo" secondAttribute="trailing" id="VN7-rs-riW"/>
+                    <constraint firstItem="bMQ-U5-aUo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ewK-d6-EIK"/>
+                    <constraint firstItem="bMQ-U5-aUo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pTX-2b-IT5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" name="background"/>
             <connections>
+                <outlet property="accountBalance" destination="I0A-Go-uMC" id="2pH-V5-8Ga"/>
+                <outlet property="accountName" destination="sd2-TA-kWh" id="Eut-ir-r9l"/>
                 <outlet property="container" destination="bMQ-U5-aUo" id="Ijv-En-vlE"/>
+                <outlet property="imagePlaceHolder" destination="KWK-2Z-0T8" id="WOk-I6-X4c"/>
             </connections>
-            <point key="canvasLocation" x="286.95652173913044" y="64.955357142857139"/>
+            <point key="canvasLocation" x="-91" y="38"/>
         </tableViewCell>
     </objects>
     <resources>
         <namedColor name="background">
             <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryContainer">
+            <color red="0.8666666666666667" green="0.90588235294117647" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
