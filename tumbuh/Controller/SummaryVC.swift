@@ -84,8 +84,7 @@ extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
         case 1:
             return 1
         default:
-            // TODO: update to accounts.count
-            return 5
+            return AccountRepository.instance.count
         }
     }
     
@@ -148,7 +147,12 @@ extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
                         
             return cell
         default:
+            let account = AccountRepository.instance.getAccounts()[indexPath.row]
             let cell = (tableView.dequeueReusableCell(withIdentifier: "accountSummaryCellId", for: indexPath) as? AccountSummaryCell)!
+            
+            cell.accountName.text = account.name
+            cell.accountBalance.text = amountFormater(amount: Float(account.balance), short: false)
+            cell.imagePlaceholder.image = UIImage(named: account.image)
             
             return cell
         }

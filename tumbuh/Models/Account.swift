@@ -11,5 +11,5 @@ struct AccountModel {
     var id: String
     var name: String
     var image: String
-    var balance: Int64?
+    var balance: Int64
 }

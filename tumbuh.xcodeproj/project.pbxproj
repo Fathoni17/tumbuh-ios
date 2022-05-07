@@ -24,6 +24,7 @@
 		32C06A602824D3D00016632F /* GoalListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C06A5E2824D3D00016632F /* GoalListItemCell.xib */; };
 		32C06A6228266C820016632F /* GroupedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C06A6128266C820016632F /* GroupedSection.swift */; };
 		32C06A6528272A490016632F /* GoalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C06A6428272A490016632F /* GoalRepository.swift */; };
+		32C06A672827395A0016632F /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C06A662827395A0016632F /* AccountRepository.swift */; };
 		32C13A6E281AE65400DB114E /* SummaryHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C13A6C281AE65400DB114E /* SummaryHeaderCell.swift */; };
 		32C13A6F281AE65400DB114E /* SummaryHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C13A6D281AE65400DB114E /* SummaryHeaderCell.xib */; };
 		32C13A73281AEACD00DB114E /* GoalsSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C13A71281AEACD00DB114E /* GoalsSummaryCell.swift */; };
@@ -80,6 +81,7 @@
 		32C06A5E2824D3D00016632F /* GoalListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalListItemCell.xib; sourceTree = "<group>"; };
 		32C06A6128266C820016632F /* GroupedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedSection.swift; sourceTree = "<group>"; };
 		32C06A6428272A490016632F /* GoalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRepository.swift; sourceTree = "<group>"; };
+		32C06A662827395A0016632F /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
 		32C13A6C281AE65400DB114E /* SummaryHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryHeaderCell.swift; sourceTree = "<group>"; };
 		32C13A6D281AE65400DB114E /* SummaryHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryHeaderCell.xib; sourceTree = "<group>"; };
 		32C13A71281AEACD00DB114E /* GoalsSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSummaryCell.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				32C06A6428272A490016632F /* GoalRepository.swift */,
+				32C06A662827395A0016632F /* AccountRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C06A672827395A0016632F /* AccountRepository.swift in Sources */,
 				32C13A81281AF53200DB114E /* Transaction.swift in Sources */,
 				32C13A77281AECAE00DB114E /* GoalSummaryItemCell.swift in Sources */,
 				328CEB7F2819F3A100FD8DE6 /* SummaryVC.swift in Sources */,
