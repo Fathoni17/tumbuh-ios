@@ -5,40 +5,34 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationLevel="16" indentationWidth="10" reuseIdentifier="summaryHeaderCellId" rowHeight="95" id="KGk-i7-Jjw" customClass="SummaryHeaderCell" customModule="tumbuh" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxl-As-8sh" userLabel="Balance Net Worth">
-                        <rect key="frame" x="0.0" y="49" width="320" height="37"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="cUu-eb-QEm"/>
+                        </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                         <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have saved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcD-fa-0dX">
-                        <rect key="frame" x="0.0" y="24" width="320" height="17"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                        <color key="textColor" systemColor="secondaryLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" name="background"/>
                 <constraints>
-                    <constraint firstItem="QcD-fa-0dX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EcR-We-JAf"/>
+                    <constraint firstItem="sxl-As-8sh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="EBw-rQ-UvQ"/>
                     <constraint firstAttribute="trailing" secondItem="sxl-As-8sh" secondAttribute="trailing" id="dF1-Uw-Vgd"/>
-                    <constraint firstAttribute="trailing" secondItem="QcD-fa-0dX" secondAttribute="trailing" id="g59-9w-TqC"/>
                     <constraint firstItem="sxl-As-8sh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gR1-Z4-LDb"/>
-                    <constraint firstItem="QcD-fa-0dX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="k2D-30-vSp"/>
-                    <constraint firstItem="sxl-As-8sh" firstAttribute="top" secondItem="QcD-fa-0dX" secondAttribute="bottom" constant="8" id="lFI-ct-oot"/>
+                    <constraint firstAttribute="bottom" secondItem="sxl-As-8sh" secondAttribute="bottom" id="mrH-Ng-uG2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -52,8 +46,5 @@
         <namedColor name="background">
             <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

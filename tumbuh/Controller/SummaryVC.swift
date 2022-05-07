@@ -14,14 +14,12 @@ class SummaryVC: UIViewController {
         super.viewDidLoad()
         
         registerCell()
-        tableView.separatorStyle = .none
     }
     
     func registerCell() {
         tableView.register(UINib(nibName: "SummaryHeaderCell", bundle: nil), forCellReuseIdentifier: "summaryHeaderCellId")
         tableView.register(UINib(nibName: "GoalsSummaryCell", bundle: nil), forCellReuseIdentifier: "goalsSummaryCellId")
-        tableView.register(UINib(nibName: "AccountHeaderSummaryCell", bundle: nil), forCellReuseIdentifier: "accountHeaderSummaryCellId")
-        tableView.register(UINib(nibName: "AccountItemCell", bundle: nil), forCellReuseIdentifier: "accountItemCellId")
+        tableView.register(UINib(nibName: "AccountSummaryCell", bundle: nil), forCellReuseIdentifier: "accountSummaryCellId")
         
     }
 
@@ -71,25 +69,73 @@ class SummaryVC: UIViewController {
 }
 
 extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3+7 // plus number of accounts
+    // MARK: - UITableViewDataSource
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
         case 0:
-            return 71+24
+            return 1
         case 1:
-            return 152+8+17+24
-        case 2:
-            return 52
+            return 1
         default:
-            return 70+16
+            // TODO: update to accounts.count
+            return 5
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 16 + 22 + 8
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 37
+        case 1:
+            return 152
+        default:
+            return 70
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var titleStr: String?
+        switch section {
+        case 0:
+            titleStr = "You have saved"
+        case 1:
+            titleStr = "My goals"
+        case 2:
+            titleStr = "My accounts"
+        default:
+            titleStr = nil
+        }
+
+        let vw = UIView()
+        vw.backgroundColor = UIColor(named: "background")
+
+        let headerLabel = UILabel()
+        headerLabel.text = titleStr
+        headerLabel.font = .systemFont(ofSize: 17, weight: .medium)
+        headerLabel.textColor = .secondaryLabel
+        headerLabel.translatesAutoresizingMaskIntoConstraints = false
+        vw.addSubview(headerLabel)
+        
+        NSLayoutConstraint.activate([
+            headerLabel.topAnchor.constraint(equalTo: vw.topAnchor, constant: 16),
+            vw.bottomAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 8),
+            vw.leadingAnchor.constraint(equalTo: headerLabel.leadingAnchor),
+            vw.trailingAnchor.constraint(equalTo: headerLabel.trailingAnchor)
+        ])
+
+        return titleStr == nil ? nil : vw
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
+        switch indexPath.section {
         case 0:
             let cell = (tableView.dequeueReusableCell(withIdentifier: "summaryHeaderCellId", for: indexPath) as? SummaryHeaderCell)!
             cell.balanceNetWorth.text = amountFormater(amount: 2050000, short: true)
@@ -98,12 +144,8 @@ extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
             let cell = (tableView.dequeueReusableCell(withIdentifier: "goalsSummaryCellId", for: indexPath) as? GoalsSummaryCell)!
             
             return cell
-        case 2:
-            let cell = (tableView.dequeueReusableCell(withIdentifier: "accountHeaderSummaryCellId", for: indexPath) as? AccountHeaderSummaryCell)!
-            
-            return cell
         default:
-            let cell = (tableView.dequeueReusableCell(withIdentifier: "accountItemCellId", for: indexPath) as? AccountItemCell)!
+            let cell = (tableView.dequeueReusableCell(withIdentifier: "accountSummaryCellId", for: indexPath) as? AccountSummaryCell)!
             
             return cell
         }
