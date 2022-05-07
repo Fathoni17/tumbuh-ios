@@ -15,7 +15,6 @@ class SummaryVC: UIViewController {
         
         registerCell()
         tableView.separatorStyle = .none
-        setupNavigationBar()
     }
     
     func registerCell() {
@@ -27,7 +26,7 @@ class SummaryVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        
+        setupNavigationBar()
     }
     
     func setupNavigationBar() {
