@@ -26,8 +26,18 @@ class AccountVC: UIViewController {
     }
     
     func setupNavigationBar() {
+        // Add and Settings button for Right barButtonItems
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.tabBarController?.navigationItem.title = "Accounts"
+        self.tabBarController?.navigationItem.leftBarButtonItems = []
+        self.tabBarController?.navigationItem.rightBarButtonItems = [addButton]
+        self.tabBarController?.navigationController?.hidesBarsOnSwipe = false
+    }
+    
+    @objc func addTapped() {
+        print("AddTapped")
     }
 }
 
