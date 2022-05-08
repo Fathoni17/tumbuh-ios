@@ -9,11 +9,16 @@ import Foundation
 
 struct TransactionModel {
     var id: String
-    var type: Int
-    var amount: Int64
     var createdAt: Date
 //    var updatedAt: Date
+    var amount: Int64
+    var desc: String
     var category: CategoryModel
     var goal: GoalModel
     var account: AccountModel
+}
+
+struct TransactionSection {
+    var month: Date
+    var transactions: [TransactionModel]
 }

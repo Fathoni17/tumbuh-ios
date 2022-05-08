@@ -129,22 +129,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Iiw-Ak-Ind">
-                                <rect key="frame" x="16" y="88" width="382" height="725"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Iiw-Ak-Ind">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" name="background"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YFL-EL-onA" id="vbg-Rl-GVe"/>
+                                    <outlet property="delegate" destination="YFL-EL-onA" id="6yq-PX-rjn"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dGQ-ai-a7y"/>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="Iiw-Ak-Ind" firstAttribute="top" secondItem="dGQ-ai-a7y" secondAttribute="top" id="1p2-ZL-EZk"/>
-                            <constraint firstItem="Iiw-Ak-Ind" firstAttribute="leading" secondItem="dGQ-ai-a7y" secondAttribute="leading" constant="16" id="Cy8-gn-lEc"/>
-                            <constraint firstItem="dGQ-ai-a7y" firstAttribute="trailing" secondItem="Iiw-Ak-Ind" secondAttribute="trailing" constant="16" id="STr-O1-61N"/>
+                            <constraint firstItem="Iiw-Ak-Ind" firstAttribute="leading" secondItem="dGQ-ai-a7y" secondAttribute="leading" id="Cy8-gn-lEc"/>
+                            <constraint firstItem="dGQ-ai-a7y" firstAttribute="trailing" secondItem="Iiw-Ak-Ind" secondAttribute="trailing" id="STr-O1-61N"/>
                             <constraint firstItem="Iiw-Ak-Ind" firstAttribute="bottom" secondItem="dGQ-ai-a7y" secondAttribute="bottom" id="c0o-FG-o9J"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Detail" image="note.text" catalog="system" id="2HF-2X-mjK"/>
                     <navigationItem key="navigationItem" title="Title" id="3wQ-kg-c7J"/>
+                    <connections>
+                        <outlet property="tableView" destination="Iiw-Ak-Ind" id="Mek-7p-qt4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6C5-Zf-LEC" sceneMemberID="firstResponder"/>
             </objects>

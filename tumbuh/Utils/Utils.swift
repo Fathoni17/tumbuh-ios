@@ -25,12 +25,21 @@ func amountFormater(amount: CGFloat, short: Bool) -> String {
     formatter.locale = Locale(identifier: "id_ID") // Change this to another locale if you want to force a specific locale, otherwise this is redundant as the current locale is the default already
     formatter.numberStyle = .currency
     
+    var amountStr: String
     if short {
         let sufix: String = amount >= 1000000 ? "jt" : amount >= 1000 ? "rb" : ""
         let level: CGFloat = amount >= 1000000 ? 1000000 : amount >= 1000 ? 1000 : 1
-        return "Rp"+String(format: "%.01f", CGFloat(amount/level)).replacingOccurrences(of: ".", with: ",")+sufix
+        amountStr =  "Rp"+String(format: "%.01f", CGFloat(amount/level)).replacingOccurrences(of: ".", with: ",")+sufix
     } else {
         let formattedTipAmount = formatter.string(from: amount as NSNumber)
-        return String(formattedTipAmount!)
+        amountStr = String(formattedTipAmount!)
     }
+    
+    return amount > 0 ? amountStr : "(\(amountStr))"
+}
+
+func firstDayOfMonth(date: Date) -> Date {
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.year, .month], from: date)
+    return calendar.date(from: components)!
 }

@@ -7,8 +7,12 @@
 
 import Foundation
 
+enum CategoryType {
+    case income, expense
+}
+
 struct CategoryModel {
     var id: String
     var name: String
-    var image: String
+    var type: CategoryType
 }
