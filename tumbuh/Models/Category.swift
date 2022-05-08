@@ -8,7 +8,7 @@
 import Foundation
 
 enum CategoryType {
-    case IN, OUT
+    case income, expense
 }
 
 struct CategoryModel {
