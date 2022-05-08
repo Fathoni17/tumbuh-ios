@@ -18,24 +18,24 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="182" translatesAutoresizingMaskIntoConstraints="NO" id="NIJ-Jz-ANA" userLabel="Container">
-                        <rect key="frame" x="16" y="12" width="339" height="40"/>
+                        <rect key="frame" x="16" y="12" width="339" height="50"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="47u-bC-vwP">
-                                <rect key="frame" x="0.0" y="0.0" width="184" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="184" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OM-bc-nBe">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OM-bc-nBe">
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="0rH-dn-nPr"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2t-zA-Ndc">
-                                        <rect key="frame" x="0.0" y="22" width="184" height="18"/>
+                                        <rect key="frame" x="0.0" y="23" width="184" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="18" id="nxK-wJ-5qo"/>
+                                            <constraint firstAttribute="height" constant="20" id="nxK-wJ-5qo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -43,11 +43,12 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="4CY-Mz-ouN"/>
+                                    <constraint firstAttribute="height" constant="50" id="4CY-Mz-ouN"/>
+                                    <constraint firstItem="s2t-zA-Ndc" firstAttribute="firstBaseline" secondItem="0OM-bc-nBe" secondAttribute="baseline" constant="16" symbolType="layoutAnchor" id="JSG-Gq-eeq"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOt-DC-egz" userLabel="Detail">
-                                <rect key="frame" x="192" y="9" width="147" height="22"/>
+                                <rect key="frame" x="192" y="14" width="147" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="z1P-u9-4La"/>
                                 </constraints>

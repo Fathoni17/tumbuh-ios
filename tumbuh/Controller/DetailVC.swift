@@ -82,9 +82,8 @@ extension DetailVC: UITableViewDataSource {
         let section = self.sections[indexPath.section]
         let transaction = section.rows[indexPath.row]
         
-        cell.title.text = transaction.desc
-        cell.subtitle.text = transaction.category.name
-        // TODO: Change source from repo
+        cell.title.text = transaction.category.name
+        cell.subtitle.text = transaction.desc
         let amountTransaction = transaction.amount
         cell.detailLabel.text = amountFormater(amount: CGFloat(amountTransaction), short: false)
         

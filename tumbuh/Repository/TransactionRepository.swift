@@ -73,7 +73,7 @@ func randomDate() -> Date? {
     let calendar = Calendar.current
     var dateComponents = calendar.dateComponents([.year, .month, .day], from: date)
     guard
-        let days = calendar.range(of: .day, in: .month, for: date),
+        let days = calendar.range(of: .month, in: .year, for: date),
         let randomDay = days.randomElement()
     else {
             return nil
