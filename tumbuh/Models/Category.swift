@@ -7,8 +7,12 @@
 
 import Foundation
 
+enum CategoryType {
+    case IN, OUT
+}
+
 struct CategoryModel {
     var id: String
     var name: String
-    var image: String
+    var type: CategoryType
 }

@@ -42,6 +42,8 @@
 		32C13A95281B6B0800DB114E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C13A94281B6B0800DB114E /* Utils.swift */; };
 		32D8025C2827A5FD0087B2E1 /* DetailItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D8025A2827A5FD0087B2E1 /* DetailItemCell.swift */; };
 		32D8025D2827A5FD0087B2E1 /* DetailItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D8025B2827A5FD0087B2E1 /* DetailItemCell.xib */; };
+		32D802602827B17C0087B2E1 /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D8025F2827B17C0087B2E1 /* TransactionRepository.swift */; };
+		32D802622827B25E0087B2E1 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D802612827B25E0087B2E1 /* CategoryRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		32C13A94281B6B0800DB114E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		32D8025A2827A5FD0087B2E1 /* DetailItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemCell.swift; sourceTree = "<group>"; };
 		32D8025B2827A5FD0087B2E1 /* DetailItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailItemCell.xib; sourceTree = "<group>"; };
+		32D8025F2827B17C0087B2E1 /* TransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
+		32D802612827B25E0087B2E1 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,10 +155,10 @@
 		328CEB4A2818FBB600FD8DE6 /* tumbuh */ = {
 			isa = PBXGroup;
 			children = (
-				32C06A6328272A350016632F /* Repository */,
 				32C13A93281B6AFB00DB114E /* Utils */,
 				328CEB4B2818FBB600FD8DE6 /* AppDelegate.swift */,
 				328CEB4D2818FBB600FD8DE6 /* SceneDelegate.swift */,
+				32C06A6328272A350016632F /* Repository */,
 				32C13A79281AF40F00DB114E /* Models */,
 				32C13A85281B55F800DB114E /* View */,
 				32C13A84281B55E600DB114E /* Controller */,
@@ -226,6 +230,8 @@
 			children = (
 				32C06A6428272A490016632F /* GoalRepository.swift */,
 				32C06A662827395A0016632F /* AccountRepository.swift */,
+				32D8025F2827B17C0087B2E1 /* TransactionRepository.swift */,
+				32D802612827B25E0087B2E1 /* CategoryRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -472,6 +478,7 @@
 				32C13A73281AEACD00DB114E /* GoalsSummaryCell.swift in Sources */,
 				328CEB562818FBB600FD8DE6 /* tumbuh.xcdatamodeld in Sources */,
 				32C06A6528272A490016632F /* GoalRepository.swift in Sources */,
+				32D802622827B25E0087B2E1 /* CategoryRepository.swift in Sources */,
 				32C13A8A281B5DCC00DB114E /* AccountSummaryCell.swift in Sources */,
 				32C06A6228266C820016632F /* GroupedSection.swift in Sources */,
 				32C13A7D281AF51200DB114E /* Account.swift in Sources */,
@@ -483,6 +490,7 @@
 				32C13A90281B62B700DB114E /* AccountItemCell.swift in Sources */,
 				328CEB4C2818FBB600FD8DE6 /* AppDelegate.swift in Sources */,
 				328CEB4E2818FBB600FD8DE6 /* SceneDelegate.swift in Sources */,
+				32D802602827B17C0087B2E1 /* TransactionRepository.swift in Sources */,
 				328CEB832819F3C500FD8DE6 /* DetailVC.swift in Sources */,
 				32C06A5F2824D3D00016632F /* GoalListItemCell.swift in Sources */,
 			);

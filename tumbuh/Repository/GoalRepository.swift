@@ -29,8 +29,8 @@ class GoalRepository {
         }
     }
     
-    func getGoalDetailById(id: String) -> GoalModel {
-        let detail = (self.data.first { $0.id == id })!
+    func getGoalById(id: String) -> GoalModel? {
+        let detail = self.data.first { $0.id == id }
         return detail
     }
 }

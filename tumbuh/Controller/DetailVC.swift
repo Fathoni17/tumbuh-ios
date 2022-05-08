@@ -60,16 +60,18 @@ extension DetailVC: UITableViewDataSource {
         return 64
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return TransactionRepository.instance.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "detailItemCellId", for: indexPath) as? DetailItemCell)!
         
-        cell.title.text = "Transaction \(indexPath.row) - \(indexPath.section)"
-        cell.subtitle.text = "Category label text"
+        let transaction = TransactionRepository.instance.getTransactionList()[indexPath.row]
+        
+        cell.title.text = transaction.desc
+        cell.subtitle.text = transaction.category.name + " " + transaction.createdAt.ISO8601Format()
         // TODO: Change source from repo
-        let amountTransaction = 20000
+        let amountTransaction = transaction.amount
         cell.detailLabel.text = amountFormater(amount: CGFloat(amountTransaction), short: false)
         
         if amountTransaction > 0 {
