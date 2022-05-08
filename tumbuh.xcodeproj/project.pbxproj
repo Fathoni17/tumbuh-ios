@@ -40,6 +40,8 @@
 		32C13A90281B62B700DB114E /* AccountItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C13A8E281B62B700DB114E /* AccountItemCell.swift */; };
 		32C13A91281B62B700DB114E /* AccountItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C13A8F281B62B700DB114E /* AccountItemCell.xib */; };
 		32C13A95281B6B0800DB114E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C13A94281B6B0800DB114E /* Utils.swift */; };
+		32D8025C2827A5FD0087B2E1 /* DetailItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D8025A2827A5FD0087B2E1 /* DetailItemCell.swift */; };
+		32D8025D2827A5FD0087B2E1 /* DetailItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D8025B2827A5FD0087B2E1 /* DetailItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		32C13A8E281B62B700DB114E /* AccountItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountItemCell.swift; sourceTree = "<group>"; };
 		32C13A8F281B62B700DB114E /* AccountItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountItemCell.xib; sourceTree = "<group>"; };
 		32C13A94281B6B0800DB114E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		32D8025A2827A5FD0087B2E1 /* DetailItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemCell.swift; sourceTree = "<group>"; };
+		32D8025B2827A5FD0087B2E1 /* DetailItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 		328CEB87281A522700FD8DE6 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				32D8025A2827A5FD0087B2E1 /* DetailItemCell.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 		32C13A96281B981100DB114E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				32D8025E2827A6080087B2E1 /* Detail */,
 				32C06A5C2824D3A80016632F /* Goal */,
 				32C13A8C281B628000DB114E /* Account */,
 				32C13A86281B564600DB114E /* Summary */,
@@ -309,6 +315,14 @@
 				32C13A6C281AE65400DB114E /* SummaryHeaderCell.swift */,
 			);
 			path = Summary;
+			sourceTree = "<group>";
+		};
+		32D8025E2827A6080087B2E1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				32D8025B2827A5FD0087B2E1 /* DetailItemCell.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32C13A91281B62B700DB114E /* AccountItemCell.xib in Resources */,
+				32D8025D2827A5FD0087B2E1 /* DetailItemCell.xib in Resources */,
 				32C13A8B281B5DCC00DB114E /* AccountSummaryCell.xib in Resources */,
 				32C13A78281AECAE00DB114E /* GoalSummaryItemCell.xib in Resources */,
 				328CEB5B2818FBB700FD8DE6 /* LaunchScreen.storyboard in Resources */,
@@ -453,6 +468,7 @@
 				32C13A77281AECAE00DB114E /* GoalSummaryItemCell.swift in Sources */,
 				328CEB7F2819F3A100FD8DE6 /* SummaryVC.swift in Sources */,
 				32C13A6E281AE65400DB114E /* SummaryHeaderCell.swift in Sources */,
+				32D8025C2827A5FD0087B2E1 /* DetailItemCell.swift in Sources */,
 				32C13A73281AEACD00DB114E /* GoalsSummaryCell.swift in Sources */,
 				328CEB562818FBB600FD8DE6 /* tumbuh.xcdatamodeld in Sources */,
 				32C06A6528272A490016632F /* GoalRepository.swift in Sources */,
