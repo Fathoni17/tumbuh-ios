@@ -63,7 +63,7 @@
             <size key="customSize" width="274" height="160"/>
             <connections>
                 <outlet property="goalName" destination="Nlf-cg-Wvg" id="Utz-eV-351"/>
-                <outlet property="goalPrecentage" destination="Nt1-I3-8tO" id="3Zo-5z-twg"/>
+                <outlet property="goalPrecentage" destination="Nt1-I3-8tO" id="wMe-lC-GeJ"/>
                 <outlet property="goalProgress" destination="VE3-bW-PJ8" id="o7k-De-29N"/>
                 <outlet property="thumbGoal" destination="HeJ-da-cJz" id="O1i-OZ-uDi"/>
             </connections>

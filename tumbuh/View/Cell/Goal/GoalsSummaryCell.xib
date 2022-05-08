@@ -44,7 +44,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="goalCollection" destination="mlh-4a-Bbo" id="uBv-uM-1MZ"/>
+                <outlet property="goalCollection" destination="mlh-4a-Bbo" id="xNd-fc-hxB"/>
             </connections>
             <point key="canvasLocation" x="5.7971014492753632" y="114.50892857142857"/>
         </tableViewCell>

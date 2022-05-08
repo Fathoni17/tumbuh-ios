@@ -47,11 +47,16 @@ extension AccountVC: UITableViewDelegate {
 
 extension AccountVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return AccountRepository.instance.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "accountItemCellId", for: indexPath) as? AccountItemCell)!
+        let account = AccountRepository.instance.getAccounts()[indexPath.row]
+        
+        cell.accountName.text = account.name
+        cell.accountBalance.text = amountFormater(amount: CGFloat(account.balance), short: false)
+        cell.imagePlaceHolder.image = UIImage(named: account.image)
         
         return cell
     }

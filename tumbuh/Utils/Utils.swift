@@ -20,15 +20,15 @@ func addBorder(border: CGFloat, collectionCell: UICollectionViewCell) {
     collectionCell.clipsToBounds = true
 }
 
-func amountFormater(amount: Float, short: Bool) -> String {
+func amountFormater(amount: CGFloat, short: Bool) -> String {
     let formatter = NumberFormatter()
     formatter.locale = Locale(identifier: "id_ID") // Change this to another locale if you want to force a specific locale, otherwise this is redundant as the current locale is the default already
     formatter.numberStyle = .currency
     
     if short {
         let sufix: String = amount >= 1000000 ? "jt" : amount >= 1000 ? "rb" : ""
-        let level: Float = amount >= 1000000 ? 1000000 : amount >= 1000 ? 1000 : 1
-        return "Rp"+String(format: "%.01f", Float(amount/level)).replacingOccurrences(of: ".", with: ",")+sufix
+        let level: CGFloat = amount >= 1000000 ? 1000000 : amount >= 1000 ? 1000 : 1
+        return "Rp"+String(format: "%.01f", CGFloat(amount/level)).replacingOccurrences(of: ".", with: ",")+sufix
     } else {
         let formattedTipAmount = formatter.string(from: amount as NSNumber)
         return String(formattedTipAmount!)

@@ -47,11 +47,24 @@ extension GoalsVC: UITableViewDelegate {
 
 extension GoalsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        7
+        GoalRepository.instance.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "goalListItemCellId", for: indexPath) as? GoalListItemCell)!
+        let goal = GoalRepository.instance.getGoalList()[indexPath.row]
+        
+        cell.goalName.text = goal.name
+        cell.balance.text = amountFormater(amount: CGFloat(goal.balance), short: false)
+        cell.imagePlaceHolder.image = UIImage(named: goal.image)
+        if goal.goal != nil {
+            let percentage = Double(goal.balance) / Double(goal.goal!) * 100
+            cell.progressPrecentage.text = String(format: "%.0f", percentage)+"%"
+            cell.goalAmount.text = amountFormater(amount: CGFloat(goal.goal!), short: false)
+        } else {
+            cell.progressPrecentage.text = "--"
+            cell.goalAmount.text = "-"
+        }
         
         return cell
     }
