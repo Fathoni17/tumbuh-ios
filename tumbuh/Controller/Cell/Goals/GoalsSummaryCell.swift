@@ -44,10 +44,10 @@ extension GoalsSummaryCell: UICollectionViewDelegate, UICollectionViewDataSource
         if (goal.goal != nil) {
             let percentage = Double(goal.balance) / Double(goal.goal!) * 100
             cell.goalPrecentage.text = String(format: "%.0f", percentage)+"%"
-            cell.goalProgress.text = "\(amountFormater(amount: Float(goal.balance), short: true)) / \(amountFormater(amount: Float(goal.goal!), short: true))"
+            cell.goalProgress.text = "\(amountFormater(amount: CGFloat(goal.balance), short: true)) / \(amountFormater(amount: CGFloat(goal.goal!), short: true))"
         } else {
             cell.goalPrecentage.text = "--"
-            cell.goalProgress.text = "\(amountFormater(amount: Float(goal.balance), short: true))"
+            cell.goalProgress.text = "\(amountFormater(amount: CGFloat(goal.balance), short: true))"
         }
         addBorder(border: 16, collectionCell: cell)
         

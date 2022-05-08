@@ -140,7 +140,11 @@ extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = (tableView.dequeueReusableCell(withIdentifier: "summaryHeaderCellId", for: indexPath) as? SummaryHeaderCell)!
-            cell.balanceNetWorth.text = amountFormater(amount: 2050000, short: true)
+            
+            // Total Balace from current account list state
+            let totalBalace = AccountRepository.instance.getTotalBalace()
+            
+            cell.balanceNetWorth.text = amountFormater(amount: CGFloat(Double(totalBalace)/1.0), short: false)
             return cell
         case 1:
             let cell = (tableView.dequeueReusableCell(withIdentifier: "goalsSummaryCellId", for: indexPath) as? GoalsSummaryCell)!
@@ -151,7 +155,7 @@ extension SummaryVC: UITableViewDelegate, UITableViewDataSource {
             let cell = (tableView.dequeueReusableCell(withIdentifier: "accountSummaryCellId", for: indexPath) as? AccountSummaryCell)!
             
             cell.accountName.text = account.name
-            cell.accountBalance.text = amountFormater(amount: Float(account.balance), short: false)
+            cell.accountBalance.text = amountFormater(amount: CGFloat(account.balance), short: false)
             cell.imagePlaceholder.image = UIImage(named: account.image)
             
             return cell

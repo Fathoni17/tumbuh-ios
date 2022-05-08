@@ -55,12 +55,12 @@ extension GoalsVC: UITableViewDataSource {
         let goal = GoalRepository.instance.getGoalList()[indexPath.row]
         
         cell.goalName.text = goal.name
-        cell.balance.text = amountFormater(amount: Float(goal.balance), short: false)
+        cell.balance.text = amountFormater(amount: CGFloat(goal.balance), short: false)
         cell.imagePlaceHolder.image = UIImage(named: goal.image)
         if goal.goal != nil {
             let percentage = Double(goal.balance) / Double(goal.goal!) * 100
             cell.progressPrecentage.text = String(format: "%.0f", percentage)+"%"
-            cell.goalAmount.text = amountFormater(amount: Float(goal.goal!), short: false)
+            cell.goalAmount.text = amountFormater(amount: CGFloat(goal.goal!), short: false)
         } else {
             cell.progressPrecentage.text = "--"
             cell.goalAmount.text = "-"

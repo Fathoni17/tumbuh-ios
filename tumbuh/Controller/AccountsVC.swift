@@ -55,7 +55,7 @@ extension AccountVC: UITableViewDataSource {
         let account = AccountRepository.instance.getAccounts()[indexPath.row]
         
         cell.accountName.text = account.name
-        cell.accountBalance.text = amountFormater(amount: Float(account.balance), short: false)
+        cell.accountBalance.text = amountFormater(amount: CGFloat(account.balance), short: false)
         cell.imagePlaceHolder.image = UIImage(named: account.image)
         
         return cell

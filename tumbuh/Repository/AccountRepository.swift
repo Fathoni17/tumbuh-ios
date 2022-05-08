@@ -32,4 +32,9 @@ class AccountRepository {
     func getAccountDetailById(id: String) -> AccountModel? {
         return self.data.first { $0.id == id }
     }
+    
+    func getTotalBalace() -> Int64 {
+        let balance: Int64 = self.data.reduce(0) { $0 + $1.balance }
+        return balance
+    }
 }
