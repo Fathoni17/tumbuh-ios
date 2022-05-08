@@ -44,8 +44,10 @@ class DetailVC: UIViewController {
         self.navigationController?.hidesBarsOnSwipe = false
     }
 
+    // MARK: Navigation
     @objc func addTapped() {
         print("AddTapped")
+        performSegue(withIdentifier: "addTransactionMd", sender: self)
     }
 }
 

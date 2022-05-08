@@ -152,11 +152,20 @@
                     <navigationItem key="navigationItem" title="Title" id="3wQ-kg-c7J"/>
                     <connections>
                         <outlet property="tableView" destination="Iiw-Ak-Ind" id="Mek-7p-qt4"/>
+                        <segue destination="tbF-RZ-1uM" kind="presentation" identifier="addTransactionMd" id="C2A-wh-9Po"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6C5-Zf-LEC" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-746.37681159420299" y="474.77678571428567"/>
+        </scene>
+        <!--AddTransaction-->
+        <scene sceneID="ZLX-Bf-q2C">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTransaction" id="tbF-RZ-1uM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDa-sq-M1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="475"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kiz-66-4iE">

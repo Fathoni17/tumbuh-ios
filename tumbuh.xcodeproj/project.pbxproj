@@ -44,6 +44,8 @@
 		32D8025D2827A5FD0087B2E1 /* DetailItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D8025B2827A5FD0087B2E1 /* DetailItemCell.xib */; };
 		32D802602827B17C0087B2E1 /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D8025F2827B17C0087B2E1 /* TransactionRepository.swift */; };
 		32D802622827B25E0087B2E1 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D802612827B25E0087B2E1 /* CategoryRepository.swift */; };
+		32D80264282805E90087B2E1 /* AddTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D80263282805E90087B2E1 /* AddTransaction.storyboard */; };
+		32D802662828062C0087B2E1 /* AddTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D802652828062C0087B2E1 /* AddTransactionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		32D8025B2827A5FD0087B2E1 /* DetailItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailItemCell.xib; sourceTree = "<group>"; };
 		32D8025F2827B17C0087B2E1 /* TransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
 		32D802612827B25E0087B2E1 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
+		32D80263282805E90087B2E1 /* AddTransaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTransaction.storyboard; sourceTree = "<group>"; };
+		32D802652828062C0087B2E1 /* AddTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				32C13A85281B55F800DB114E /* View */,
 				32C13A84281B55E600DB114E /* Controller */,
 				328CEB512818FBB600FD8DE6 /* Main.storyboard */,
+				32D80263282805E90087B2E1 /* AddTransaction.storyboard */,
 				328CEB572818FBB700FD8DE6 /* Assets.xcassets */,
 				328CEB592818FBB700FD8DE6 /* LaunchScreen.storyboard */,
 				328CEB5C2818FBB700FD8DE6 /* Info.plist */,
@@ -255,6 +260,7 @@
 				328CEB802819F3B300FD8DE6 /* GoalsVC.swift */,
 				328CEB4F2818FBB600FD8DE6 /* AccountsVC.swift */,
 				328CEB822819F3C500FD8DE6 /* DetailVC.swift */,
+				32D802652828062C0087B2E1 /* AddTransactionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 				32C13A78281AECAE00DB114E /* GoalSummaryItemCell.xib in Resources */,
 				328CEB5B2818FBB700FD8DE6 /* LaunchScreen.storyboard in Resources */,
 				32C13A6F281AE65400DB114E /* SummaryHeaderCell.xib in Resources */,
+				32D80264282805E90087B2E1 /* AddTransaction.storyboard in Resources */,
 				32C06A602824D3D00016632F /* GoalListItemCell.xib in Resources */,
 				328CEB582818FBB700FD8DE6 /* Assets.xcassets in Resources */,
 				328CEB532818FBB600FD8DE6 /* Main.storyboard in Resources */,
@@ -489,6 +496,7 @@
 				32C13A7F281AF51E00DB114E /* Category.swift in Sources */,
 				32C13A90281B62B700DB114E /* AccountItemCell.swift in Sources */,
 				328CEB4C2818FBB600FD8DE6 /* AppDelegate.swift in Sources */,
+				32D802662828062C0087B2E1 /* AddTransactionVC.swift in Sources */,
 				328CEB4E2818FBB600FD8DE6 /* SceneDelegate.swift in Sources */,
 				32D802602827B17C0087B2E1 /* TransactionRepository.swift in Sources */,
 				328CEB832819F3C500FD8DE6 /* DetailVC.swift in Sources */,
