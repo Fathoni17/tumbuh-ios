@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol AddTransactionDelegate {
+    func addTransaction(transaction: TransactionModel)
+}
+
 class AddTransactionVC: UIViewController {
+    var delegate: AddTransactionDelegate?
+    
     @IBOutlet weak var tableView: UITableView!
     let labels = [
         ["Date", "Amount", "Notes", "Category"],
@@ -43,9 +49,9 @@ class AddTransactionVC: UIViewController {
         let accountIndex = (tableView.cellForRow(at: IndexPath(row: 1, section: 1)) as? AddTransactionCell)!.pickerView.selectedRow(inComponent: 0)
         let account: AccountModel = AccountRepository.instance.getAccounts()[accountIndex]
         
-        TransactionRepository.instance.addTransaction(goal: goal, account: account, amount: amount, notes: notes, category: category, date: createdAt)
+        let newTransaction: TransactionModel = TransactionRepository.instance.addTransaction(goal: goal, account: account, amount: amount, notes: notes, category: category, date: createdAt)
 
-        self.dismiss(animated: true, completion: nil)
+        delegate?.addTransaction(transaction: newTransaction)
     }
     
 }

@@ -70,6 +70,20 @@ class SummaryVC: UIViewController {
     @objc func settingsTapped() {
         print("SettingsTapped")
     }
+    
+    // MARK: - Navigation Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addTransactionSummaryMd" {
+            let dest = segue.destination as! AddTransactionVC
+            dest.delegate = self
+        }
+    }
+}
+
+extension SummaryVC: AddTransactionDelegate {
+    func addTransaction(transaction: TransactionModel) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension SummaryVC: UITableViewDelegate, UITableViewDataSource {

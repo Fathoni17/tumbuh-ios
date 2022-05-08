@@ -152,7 +152,7 @@
                     <tabBarItem key="tabBarItem" title="Detail" image="note.text" catalog="system" id="2HF-2X-mjK"/>
                     <navigationItem key="navigationItem" title="Title" id="3wQ-kg-c7J"/>
                     <connections>
-                        <outlet property="tableView" destination="Iiw-Ak-Ind" id="Mek-7p-qt4"/>
+                        <outlet property="transactionTableView" destination="Iiw-Ak-Ind" id="Mek-7p-qt4"/>
                         <segue destination="tbF-RZ-1uM" kind="presentation" identifier="addTransactionMd" id="C2A-wh-9Po"/>
                     </connections>
                 </viewController>
