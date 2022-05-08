@@ -65,6 +65,7 @@ class SummaryVC: UIViewController {
     // MARK: - Function for button
     @objc func addTapped() {
         print("AddTapped")
+        performSegue(withIdentifier: "addTransactionSummaryMd", sender: self)
     }
     @objc func settingsTapped() {
         print("SettingsTapped")

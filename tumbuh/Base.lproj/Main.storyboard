@@ -43,6 +43,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="FU4-xM-I0F" id="S3n-99-gcB"/>
+                        <segue destination="tbF-RZ-1uM" kind="presentation" identifier="addTransactionSummaryMd" id="KR1-pT-xat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TY9-H2-Hql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -165,7 +166,7 @@
                 <viewControllerPlaceholder storyboardName="AddTransaction" id="tbF-RZ-1uM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDa-sq-M1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="475"/>
+            <point key="canvasLocation" x="-955" y="891"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kiz-66-4iE">
@@ -206,6 +207,9 @@
             <point key="canvasLocation" x="-1901" y="-399"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KR1-pT-xat"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="chart.bar.doc.horizontal" catalog="system" width="115" height="128"/>
         <image name="checkmark.seal" catalog="system" width="128" height="128"/>
