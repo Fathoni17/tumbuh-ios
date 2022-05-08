@@ -9,11 +9,19 @@ import UIKit
 
 class DetailVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    var sections = [GroupedSection<Date, TransactionModel>]()
+    var trasactionList = TransactionRepository.instance.getTransactionList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         registerCell()
+        self.sections = GroupedSection.group(rows: self.trasactionList, by: {
+            firstDayOfMonth(date: $0.createdAt)
+        })
+        self.sections.sort { lhs, rhs in
+            lhs.sectionItem > rhs.sectionItem
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,30 +54,36 @@ extension DetailVC: UITableViewDelegate {
 
 extension DetailVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return self.sections.count
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         22 + 16
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Group on \(section)"
+        let section = self.sections[section]
+        let date = section.sectionItem
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM yyyy"
+        
+        return dateFormatter.string(from: date)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TransactionRepository.instance.count
+        return self.sections[section].rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "detailItemCellId", for: indexPath) as? DetailItemCell)!
         
-        let transaction = TransactionRepository.instance.getTransactionList()[indexPath.row]
+        let section = self.sections[indexPath.section]
+        let transaction = section.rows[indexPath.row]
         
         cell.title.text = transaction.desc
-        cell.subtitle.text = transaction.category.name + " " + transaction.createdAt.ISO8601Format()
+        cell.subtitle.text = transaction.category.name
         // TODO: Change source from repo
         let amountTransaction = transaction.amount
         cell.detailLabel.text = amountFormater(amount: CGFloat(amountTransaction), short: false)

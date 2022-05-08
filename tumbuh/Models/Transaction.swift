@@ -17,3 +17,8 @@ struct TransactionModel {
     var goal: GoalModel
     var account: AccountModel
 }
+
+struct TransactionSection {
+    var month: Date
+    var transactions: [TransactionModel]
+}

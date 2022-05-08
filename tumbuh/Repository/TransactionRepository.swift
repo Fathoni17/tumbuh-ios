@@ -78,6 +78,6 @@ func randomDate() -> Date? {
     else {
             return nil
     }
-    dateComponents.setValue(randomDay, for: .day)
+    dateComponents.setValue(randomDay, for: .month)
     return calendar.date(from: dateComponents)
 }

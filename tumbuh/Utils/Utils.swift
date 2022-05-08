@@ -37,3 +37,9 @@ func amountFormater(amount: CGFloat, short: Bool) -> String {
     
     return amount > 0 ? amountStr : "(\(amountStr))"
 }
+
+func firstDayOfMonth(date: Date) -> Date {
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.year, .month], from: date)
+    return calendar.date(from: components)!
+}
