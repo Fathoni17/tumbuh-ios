@@ -16,6 +16,9 @@ class GoalSummaryItemCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        thumbGoal.layer.cornerRadius = 8
+        thumbGoal.clipsToBounds = true
     }
 
 }
