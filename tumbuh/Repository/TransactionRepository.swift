@@ -21,7 +21,7 @@ class TransactionRepository {
             amount: 4913000,
             desc: "Modal Awal",
             category: ctgRepo.getCategoryById(id: "11")!,
-            goal: goalRepo.getGoalById(id: "4")!,
+            goal: goalRepo.getGoalById(id: "3")!,
             account: accRepo.getAccountDetailById(id: "1")!),
         TransactionModel(
             id: "1",
@@ -29,7 +29,7 @@ class TransactionRepository {
             amount: 130000,
             desc: "Cash Awal",
             category: ctgRepo.getCategoryById(id: "11")!,
-            goal: goalRepo.getGoalById(id: "4")!,
+            goal: goalRepo.getGoalById(id: "3")!,
             account: accRepo.getAccountDetailById(id: "0")!),
         TransactionModel(
             id: "2",
@@ -37,7 +37,7 @@ class TransactionRepository {
             amount: -65000,
             desc: "Shampoo and Parfume",
             category: ctgRepo.getCategoryById(id: "5")!,
-            goal: goalRepo.getGoalById(id: "4")!,
+            goal: goalRepo.getGoalById(id: "3")!,
             account: accRepo.getAccountDetailById(id: "1")!),
         TransactionModel(
             id: "3",
@@ -45,7 +45,7 @@ class TransactionRepository {
             amount: -250000,
             desc: "Gasoline",
             category: ctgRepo.getCategoryById(id: "2")!,
-            goal: goalRepo.getGoalById(id: "4")!,
+            goal: goalRepo.getGoalById(id: "3")!,
             account: accRepo.getAccountDetailById(id: "1")!),
         TransactionModel(
             id: "4",
@@ -53,7 +53,7 @@ class TransactionRepository {
             amount: -50000,
             desc: "Internet Data",
             category: ctgRepo.getCategoryById(id: "3")!,
-            goal: goalRepo.getGoalById(id: "4")!,
+            goal: goalRepo.getGoalById(id: "3")!,
             account: accRepo.getAccountDetailById(id: "0")!),
         ]
     }

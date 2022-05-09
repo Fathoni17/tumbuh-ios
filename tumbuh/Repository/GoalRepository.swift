@@ -14,8 +14,7 @@ class GoalRepository {
     private var data: [GoalModel] = [
         GoalModel(id: "1", name: "Motorcycle", image: "ic_motor", goal: 40000000, balance: 0),
         GoalModel(id: "2", name: "New iPad", image: "ic_mobile", goal: 15000000, balance: 0),
-        GoalModel(id: "3", name: "Hajj", image: "ic_wishlist", goal: 70000000, balance: 0),
-        GoalModel(id: "4", name: "Monthly Budget", image: "ic_wallet", goal: nil, balance: 0),
+        GoalModel(id: "3", name: "Monthly Budget", image: "ic_wallet", goal: nil, balance: 0),
     ]
     
     func getGoalList() -> [GoalModel] {
