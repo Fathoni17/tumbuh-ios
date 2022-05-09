@@ -8,15 +8,28 @@
 import UIKit
 
 class DetailVC: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var transactionTableView: UITableView!
     var sections = [GroupedSection<Date, TransactionModel>]()
-    var trasactionList = TransactionRepository.instance.getTransactionList()
+    var trasactionList: [TransactionModel] = [TransactionModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        trasactionList = TransactionRepository.instance.getTransactionList()
         registerCell()
-        self.sections = GroupedSection.group(rows: self.trasactionList, by: {
+        updateSectionList(transactionList: self.trasactionList)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupNavigationBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.updateTableViewData()
+    }
+
+    func updateSectionList(transactionList: [TransactionModel]) {
+        self.sections = GroupedSection.group(rows: transactionList, by: {
             firstDayOfMonth(date: $0.createdAt)
         })
         self.sections.sort { lhs, rhs in
@@ -24,12 +37,14 @@ class DetailVC: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        setupNavigationBar()
+    func updateTableViewData() {
+        self.trasactionList = TransactionRepository.instance.getTransactionList()
+        self.updateSectionList(transactionList: self.trasactionList)
+        self.transactionTableView.reloadData()
     }
-
+    
     func registerCell() {
-        tableView.register(UINib(nibName: "DetailItemCell", bundle: nil), forCellReuseIdentifier: "detailItemCellId")
+        transactionTableView.register(UINib(nibName: "DetailItemCell", bundle: nil), forCellReuseIdentifier: "detailItemCellId")
     }
     
     func setupNavigationBar() {
@@ -44,8 +59,26 @@ class DetailVC: UIViewController {
         self.navigationController?.hidesBarsOnSwipe = false
     }
 
+    // MARK: Navigation
     @objc func addTapped() {
         print("AddTapped")
+        performSegue(withIdentifier: "addTransactionMd", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addTransactionMd" {
+            let destinationVC = segue.destination as! AddTransactionVC
+            destinationVC.delegate = self
+        }
+    }
+}
+
+extension DetailVC: AddTransactionDelegate {
+    func addTransaction(transaction: TransactionModel) {
+        self.dismiss(animated: true) {
+            self.updateTableViewData()
+            
+        }
     }
 }
 

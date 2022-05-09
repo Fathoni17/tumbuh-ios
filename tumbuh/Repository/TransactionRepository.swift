@@ -65,6 +65,14 @@ class TransactionRepository {
     func getTransactionList() -> [TransactionModel] {
         return self.data
     }
+    
+    func addTransaction(goal: GoalModel, account: AccountModel, amount: Int64, notes: String, category: CategoryModel, date: Date) -> TransactionModel {
+        let lastIndex = Int(self.data.last!.id)!
+        let newTransaction = TransactionModel(id: "\(lastIndex + 1)", createdAt: date, amount: amount, desc: notes, category: category, goal: goal, account: account)
+        self.data.append(newTransaction)
+        
+        return newTransaction
+    }
 }
 
 

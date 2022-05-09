@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add TransactionVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AddTransactionVC" customModule="tumbuh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rnf-tK-8cK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Add Transaction" id="Dge-rc-Qx2"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR3-5f-ySk">
+                                <rect key="frame" x="8" y="12.5" width="69" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancleTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Zfi-U8-Iof"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPb-b2-QUd">
+                                <rect key="frame" x="350" y="12.5" width="56" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8RQ-E4-zcB"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vf7-HJ-7Ao">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <color key="backgroundColor" name="background"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="zuw-WF-p0B"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Nkz-CN-PcN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vf7-HJ-7Ao" secondAttribute="trailing" id="7Sc-cB-UJV"/>
+                            <constraint firstItem="hR3-5f-ySk" firstAttribute="centerY" secondItem="Rnf-tK-8cK" secondAttribute="centerY" id="8D4-dK-536"/>
+                            <constraint firstItem="Vf7-HJ-7Ao" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DHh-9H-1yu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Vf7-HJ-7Ao" secondAttribute="bottom" id="Lgb-kf-ZD9"/>
+                            <constraint firstItem="Rnf-tK-8cK" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="WC1-7i-HnM"/>
+                            <constraint firstItem="Rnf-tK-8cK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Zok-mf-kmh"/>
+                            <constraint firstItem="gPb-b2-QUd" firstAttribute="centerY" secondItem="Rnf-tK-8cK" secondAttribute="centerY" id="aBQ-hP-4Tu"/>
+                            <constraint firstItem="Rnf-tK-8cK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="p3Y-vO-qxi"/>
+                            <constraint firstItem="hR3-5f-ySk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="pMg-Ga-bVt"/>
+                            <constraint firstItem="Vf7-HJ-7Ao" firstAttribute="top" secondItem="Rnf-tK-8cK" secondAttribute="bottom" id="sRw-sE-hdq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gPb-b2-QUd" secondAttribute="trailing" constant="8" id="xHM-ni-icI"/>
+                        </constraints>
+                    </view>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vf7-HJ-7Ao" id="bKo-C1-4Dz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="92"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="background">
+            <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

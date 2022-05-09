@@ -65,9 +65,24 @@ class SummaryVC: UIViewController {
     // MARK: - Function for button
     @objc func addTapped() {
         print("AddTapped")
+        performSegue(withIdentifier: "addTransactionSummaryMd", sender: self)
     }
     @objc func settingsTapped() {
         print("SettingsTapped")
+    }
+    
+    // MARK: - Navigation Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addTransactionSummaryMd" {
+            let dest = segue.destination as! AddTransactionVC
+            dest.delegate = self
+        }
+    }
+}
+
+extension SummaryVC: AddTransactionDelegate {
+    func addTransaction(transaction: TransactionModel) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
