@@ -21,6 +21,10 @@ class SummaryVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        updateTableViewData()
+    }
+
+    func updateTableViewData() {
         TransactionRepository.instance.syncBalance()
         tableView.reloadData()
     }
@@ -87,7 +91,9 @@ class SummaryVC: UIViewController {
 
 extension SummaryVC: AddTransactionDelegate {
     func addTransaction(transaction: TransactionModel) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {
+            self.updateTableViewData()
+        })
     }
 }
 

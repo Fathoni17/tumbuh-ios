@@ -7,15 +7,17 @@
 import Foundation
 
 class TransactionRepository {
+    private let dateFormatter = DateFormatter()
+    
     private init() {
         ctgRepo = CategoryRepository.instance
         goalRepo = GoalRepository.instance
         accRepo = AccountRepository.instance
-        
+        dateFormatter.dateFormat = "yyyy-MM-dd"
     data = [
         TransactionModel(
             id: "0",
-            createdAt: Date.now,
+            createdAt: self.dateFormatter.date(from: "2022-01-01")!,
             amount: 4913000,
             desc: "Modal Awal",
             category: ctgRepo.getCategoryById(id: "11")!,
@@ -23,7 +25,7 @@ class TransactionRepository {
             account: accRepo.getAccountDetailById(id: "1")!),
         TransactionModel(
             id: "1",
-            createdAt: randomDate() ?? Date.now,
+            createdAt: self.dateFormatter.date(from: "2022-01-01")!,
             amount: 130000,
             desc: "Cash Awal",
             category: ctgRepo.getCategoryById(id: "11")!,
