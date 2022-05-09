@@ -20,6 +20,11 @@ class SummaryVC: UIViewController {
         setupNavigationBar()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        TransactionRepository.instance.syncBalance()
+        tableView.reloadData()
+    }
+    
     func registerCell() {
         // MARK: - Registering used cell
         tableView.register(UINib(nibName: "SummaryHeaderCell", bundle: nil), forCellReuseIdentifier: "summaryHeaderCellId")

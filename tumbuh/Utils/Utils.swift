@@ -35,7 +35,7 @@ func amountFormater(amount: CGFloat, short: Bool) -> String {
         amountStr = String(formattedTipAmount!)
     }
     
-    return amount > 0 ? amountStr : "(\(amountStr))"
+    return amount >= 0 ? amountStr : "(\(amountStr))"
 }
 
 func firstDayOfMonth(date: Date) -> Date {

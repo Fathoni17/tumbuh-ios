@@ -21,6 +21,11 @@ class AccountVC: UIViewController {
         setupNavigationBar()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        TransactionRepository.instance.syncBalance()
+        tableView.reloadData()
+    }
+
     func registerCell() {
         tableView.register(UINib(nibName: "AccountItemCell", bundle: nil), forCellReuseIdentifier: "accountItemCellId")
     }

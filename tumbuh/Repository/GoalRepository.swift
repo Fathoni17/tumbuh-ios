@@ -12,10 +12,10 @@ class GoalRepository {
     
     // TODO: this is data dummy provider
     private var data: [GoalModel] = [
-        GoalModel(id: "1", name: "Motorcycle", image: "ic_motor", goal: 40000000, balance: 28850000),
-        GoalModel(id: "2", name: "New iPad", image: "ic_mobile", goal: 15000000, balance: 8700000),
-        GoalModel(id: "3", name: "Hajj", image: "ic_wishlist", goal: 70000000, balance: 17400000),
-        GoalModel(id: "4", name: "Monthly Budget", image: "ic_wallet", goal: nil, balance: 5413917),
+        GoalModel(id: "1", name: "Motorcycle", image: "ic_motor", goal: 40000000, balance: 0),
+        GoalModel(id: "2", name: "New iPad", image: "ic_mobile", goal: 15000000, balance: 0),
+        GoalModel(id: "3", name: "Hajj", image: "ic_wishlist", goal: 70000000, balance: 0),
+        GoalModel(id: "4", name: "Monthly Budget", image: "ic_wallet", goal: nil, balance: 0),
     ]
     
     func getGoalList() -> [GoalModel] {
@@ -26,6 +26,15 @@ class GoalRepository {
     var count: Int {
         get {
             return Int(self.data.count)
+        }
+    }
+    
+    func updateBalance(transactionList: [TransactionModel]) {
+        self.data = self.data.map { (goal) in
+            let updatedBalance =  transactionList.filter { (transaction) in
+                transaction.goal.id == goal.id
+            }.reduce(0) { $0 + $1.amount }
+            return GoalModel(id: goal.id, name: goal.name, image: goal.image, goal: goal.goal, balance: updatedBalance)
         }
     }
     

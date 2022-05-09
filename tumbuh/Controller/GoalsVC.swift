@@ -20,7 +20,12 @@ class GoalsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         setupNavigationBar()
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        TransactionRepository.instance.syncBalance()
+        tableView.reloadData()
+    }
+
     func registerCell() {
         tableView.register(UINib(nibName: "GoalListItemCell", bundle: nil), forCellReuseIdentifier: "goalListItemCellId")
     }
